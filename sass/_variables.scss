@@ -1,0 +1,33 @@
+$base: #3399CC;
+$base-dark: #23292C;
+$base-light: #E6E8EA;
+$base-mix: mix($base-dark, $base-light, 85%);
+
+$red: #fc1770;
+$orange: #ff7f36;
+$yellow: #fff261;
+$green: #94ca3d;
+$blue: #15c5ec;
+$purple: #c657af;
+
+$rank-low: $green;
+$rank-med: $base;
+$rank-high: $red;
+
+$base-font: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+$code-font: Consolas, Monaco, 'Andale Mono', monospace;
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return $base-dark; // Lighter backgorund, return dark color
+    } @else {
+        @return $base-light; // Darker background, return light color
+    }
+}
+
+@mixin background-stripes($alpha:0.05, $angle:-45deg) {
+    background-size: 1rem 1rem;
+    background-image: linear-gradient($angle, rgba(#FFF, $alpha) 25%, transparent 25%, transparent 50%, rgba(#FFF, $alpha) 50%, rgba(#FFF, $alpha) 75%, transparent 75%, transparent);
+}
+
+@import 'utility';

@@ -1,0 +1,15 @@
+.bg-red {background: $red; color:set-text-color($red);}
+.bg-orange {background: $orange; color:set-text-color($orange);}
+.bg-yellow {background: $yellow; color:set-text-color($yellow);}
+.bg-green {background: $green; color:set-text-color($green);}
+.bg-blue {background: $blue; color:set-text-color($blue);}
+.bg-purple {background: $purple; color:set-text-color($purple);}
+.bg-dark {background: $base-dark; color:set-text-color($base-dark);}
+.bg-light {background: $base-light; color:set-text-color($base-light);}
+
+.fg-red {color: $red;}
+.fg-orange {color: $orange;}
+.fg-yellow {color: $yellow;}
+.fg-green {color: $green;}
+.fg-blue {color: $blue;}
+.fg-purple {color: $purple;}

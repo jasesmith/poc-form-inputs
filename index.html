@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>Form Inputs</title>
+        <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8" />
+    </head>
+    <body ng-controller="mainController">
+        <header>
+            Form Input Experiments
+        </header>
+        <main>
+            <article class="{{styles[config.style].key}}" ng-class="{'super': config.style > 1}">
+                <header>
+                    {{styles[config.style].name}}
+                </header>
+                <section>
+                    <div class="form-row">
+                        <div class="label">
+                            <label>Hostname</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="{{styles[config.style].key == 'none' ? '' : 'Hostname'}}" check-this-out />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="label">
+                            <label>Password</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="{{styles[config.style].key == 'none' ? '' : 'Password'}}" check-this-out />
+                            <div class="note">
+                                Must be American Apparel YOLO taxidermy pour-over fixie, vinyl whatever Schlitz raw denim Kickstarter.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <aside>
+                <header>Styles</header>
+                <section>
+                    <p ng-repeat="(id, style) in styles">
+                        <label><input type="radio" ng-model="config.style" value="{{id}}" /> {{style.name}}</label>
+                    </p>
+                </section>
+            </aside>
+        </main>
+        <footer>
+            Footer
+        </footer>
+        <script src="/js/lib/angular.min.js"></script>
+        <script src="/js/lib/angular-animate.min.js"></script>
+        <script src="/js/lib/underscore-min.js"></script>
+        <script src="/js/lib/moment.min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
