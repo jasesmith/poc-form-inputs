@@ -91,6 +91,9 @@ input {
             &::-moz-placeholder {color: #FFF;}  /* Firefox 19+ */
             &:-ms-input-placeholder {color: #FFF;}
         }
+        &[required]:invalid {
+            border-color: red;
+        }
     }
     .label, .field {
         transition: .3s ease-out;
